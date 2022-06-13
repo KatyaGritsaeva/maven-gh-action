@@ -1,31 +1,33 @@
 package com.gritsaeva;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions .*;
 
-    public class StatisticsServiceTest {
+import static org.junit.jupiter.api.Assertions.*;
 
-        @Test
-        void findMax() {
-            StatisticsService service = new StatisticsService();
+public class StatisticsServiceTest {
 
-            long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 8, 6, 11, 11, 12};
-            long expected = 12;
+    @Test
+    void findMax() {
+        StatisticsService service = new StatisticsService();
 
-            long actual = service.findMax(incomesInBillions);
+        long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 8, 6, 11, 11, 12};
+        long expected = 12;
 
-            assertEquals(expected, actual);
-        }
-        @Test
-        void findMaxInTheMiddle() {
-            StatisticsService service = new StatisticsService();
+        long actual = service.findMax(incomesInBillions);
 
-            long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 25, 8, 6, 11, 11, 12};
-            long expected = 25;
-
-            long actual = service.findMax(incomesInBillions);
-
-            assertEquals(expected, actual);
-        }
+        assertEquals(expected, actual);
     }
+
+    @Test
+    void findMaxInTheMiddle() {
+        StatisticsService service = new StatisticsService();
+
+        long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 25, 8, 6, 11, 11, 12};
+        long expected = 25;
+
+        long actual = service.findMax(incomesInBillions);
+
+        assertEquals(expected, actual);
+    }
+}
 
